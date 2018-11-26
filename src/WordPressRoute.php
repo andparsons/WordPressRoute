@@ -60,6 +60,11 @@ class WordPressRoute
 
     public function try_match($request): void
     {
+        if (isset($this->args['template'])) {
+            if (preg_match("/" . $this->regex . "/", $request->request)) {
+                add_filter('template', [&$this, 'template'], 1, 0);
+            }
+        }
         if ($this->regex == $request->matched_rule) {
             $this->engage_callbacks();
         }
