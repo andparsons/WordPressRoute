@@ -1,0 +1,16 @@
+{
+    "name": "sozo/wordpress-routes",
+    "description": "A simple router class for WordPress",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andy Parsons",
+            "email": "andrew@sozodesign.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SOZO\\Router\\": "src/"
+        }
+    }
+}
